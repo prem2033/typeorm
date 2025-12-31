@@ -16,7 +16,10 @@ export class Users {
   @Column({ type: "varchar", length: 128, nullable: true })
   city?: string;
 
+  // ✅ NEW COLUMN
+  @Column({ type: "varchar", length: 8, nullable: true })
+  countryCode?: string;
+
   @Column("timestamp", { name: "_uts", default: () => "CURRENT_TIMESTAMP" })
-  uts: Date;
-  timestamp!: Date | string;
+  uts?: Date;
 }

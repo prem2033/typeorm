@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column , Index} from "typeorm";
 
+@Index("IDX_EMPLOYEE_EMPID", ["empid"])
 @Entity("employee")
 export class Employee {
   @PrimaryGeneratedColumn({ type: "int", name: "id" })
